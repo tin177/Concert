@@ -25,7 +25,7 @@ public class MessageController {
         this.messageService = messageService;
         this.messageRepository = messageRepository;
     }
-    @PostMapping("/submitChoice")
+    @PostMapping("/api/submitChoice")
     public ResponseEntity<Map<String, Object>> submitChoice(@RequestBody message request) {
 
         if (request.getDays() == null || request.getDays().isEmpty()) {
