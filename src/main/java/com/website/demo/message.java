@@ -15,7 +15,7 @@ import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Table;
 
 @Entity 
-@Table(name = "user_getLoudTix")
+@Table(name = "user_getloudtix")
 public class message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
