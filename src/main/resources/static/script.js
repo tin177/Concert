@@ -99,7 +99,7 @@ function submitReservation() {
     })
     .catch(error => {
         console.error("Error submitting reservation:", error);
-        alert("An error occurred. Please try again.");
+        alert("An error occurred. Please try again." +error.message);
     });
 }
 document.getElementById("confirmation").addEventListener("submit", function(event) {

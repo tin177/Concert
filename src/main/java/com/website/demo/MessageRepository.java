@@ -13,13 +13,13 @@ public class MessageRepository {
     }
     
     public boolean existsByNameAndEmail(String name, String email) {
-        String sql = "SELECT COUNT(*) FROM konzerts WHERE Name = ? AND Email = ?";
+        String sql = "SELECT COUNT(*) FROM user_getLoudTix WHERE Name = ? AND Email = ?";
         Integer count = jdbcTemplate.queryForObject(sql, Integer.class, name, email);
         return count != null && count > 0; 
     }
 
     public void saveMessageToDatabase(String name, String email, String day) {
-        String sql = "INSERT INTO konzerts (Name, Email, Day) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO user_getLoudTix (Name, Email, Day) VALUES (?, ?, ?)";
         jdbcTemplate.update(sql, name, email, day); 
     }
     
