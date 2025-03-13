@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
+    <div class="container">
     <div id="signIn" class="center-box">
         <h1>Ticket Reservation</h1>
 
@@ -24,7 +25,7 @@
         <button id="viewButton" type="button">View Reservation</button>
     </div>
 
-    <div id="rsrv" style="display: none;">
+    <div id="rsrv" class="rsrv" style="display: none;">
         <h3>Start Reservation</h3>
         <form id="confirmation" method="post" action="/submitChoice">
             <input type="checkbox" name="day" value="Day 1"> Day 1: NIKI, TWICE, Olivia Rodrigo<br>
@@ -34,14 +35,14 @@
         </form>   
     </div>
 
-    <div id="viewRsrv" style="display: none;">
+    <div id="viewRsrv" class="viewRsrv" style="display: none;">
         <h4>View Reservation</h4>
         <p4>Reservation Information: </p4>
             <button id="" type="button">Change Reservation</button>
             <button id="doneButton" type="button">Done</button>
         </label>
     </div>
-
+</div>
         <script src="script.js"></script>
 </body>
 </html>
