@@ -87,7 +87,7 @@ function submitReservation(event) {
     const formData = getFormData();
     console.log("Sending data:", formData); 
 
-    fetch("https://getloudtix-production.up.railway.app//api/submitChoice", {
+    fetch("https://getloudtix-production.up.railway.app/api/submitChoice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
