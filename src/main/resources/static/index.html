@@ -27,7 +27,7 @@
 
     <div id="rsrv" class="rsrv" style="display: none;">
         <h3>Start Reservation</h3>
-        <form id="confirmation" method="post" action="/submitChoice">
+        <form id="confirmation" method="post" onsubmit="submitReservation(event)">
             <input type="checkbox" name="day" value="Day 1"> Day 1: NIKI, TWICE, Olivia Rodrigo<br>
             <input type="checkbox" name="day" value="Day 2"> Day 2: BINI, Ben&Ben, December Avenue<br>
             <input type="checkbox" name="day" value="Day 3"> Day 3: Ariana Grande, Sabrina Carpenter, The Weeknd<br>

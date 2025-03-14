@@ -74,14 +74,16 @@ function getFormData() {
     const selectedDays = Array.from(document.querySelectorAll('input[name="day"]:checked'))
                               .map(checkbox => checkbox.value);
 
-    return { name, email, days: selectedDays };
+    return { name, email, day: selectedDays };
 }
 function saveFormData() {
     const formData = getFormData(); 
     localStorage.setItem("reservationData", JSON.stringify(formData));
     console.log("Data saved:", formData);
 }
-function submitReservation() {
+function submitReservation(event) {
+    event.preventDefault(); 
+    saveFormData();
     const formData = getFormData();
 
     fetch("/api/submitChoice", {
