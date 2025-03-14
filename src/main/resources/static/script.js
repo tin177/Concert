@@ -96,7 +96,7 @@ function submitReservation(event) {
         if (data.success) {
             alert("Reservation successful!");
         } else {
-            alert("Reservation failed." + data.message);
+            alert("Reservation failed. js f" + data.message);
         }
     })
     .catch(error => {
