@@ -28,11 +28,11 @@ public class MessageController {
     @PostMapping("/submitChoice")
     public ResponseEntity<Map<String, Object>> submitChoice(@RequestBody message request) {
 
-        if (request.getDays() == null || request.getDays().isEmpty()) {
+        if (request.getDay() == null || request.getDay().isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of("success", false, "message", "Please select at least one day."));
         }
 
-        String dayString = String.join(", ", request.getDays());
+        String dayString = String.join(", ", request.getDay());
 
         messageService.saveMessage(request.getName(), request.getEmail(), dayString);
 

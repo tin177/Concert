@@ -46,10 +46,10 @@ private List<String> day;
             this.email =  email;
         }
 
-        public List<String> getDays(){
+        public List<String> getDay(){
             return day;
         }
-        public void setDays(List<String> day){
+        public void setDay(List<String> day){
             this.day = day;
         }
 

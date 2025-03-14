@@ -109,12 +109,12 @@ document.getElementById("confirmation").addEventListener("submit", function(even
 
     const formData = getFormData();
     
-    if (!formData.name || !formData.email || formData.days.length === 0) {
+    if (!formData.name || !formData.email || formData.day.length === 0) {
         alert("Please fill in all fields and select at least one day.");
         return;
     }
 
-    const userConfirmed = confirm("Are you sure you want to reserve tickets for " + formData.days.join(", ") + "?");
+    const userConfirmed = confirm("Are you sure you want to reserve tickets for " + formData.day.join(", ") + "?");
     if (!userConfirmed) return;
 
     saveFormData(); 
