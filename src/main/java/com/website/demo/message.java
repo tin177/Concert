@@ -23,14 +23,14 @@ private String name;
 private String email;
 
 @ElementCollection
-private List<String> days;
+private List<String> day;
 
     public message() {}
 
-    public message(String name, String email, List<String> days){
+    public message(String name, String email, List<String> day){
         this.name = name;
         this.email = email;
-        this.days = days;
+        this.day = day;
     }
         public String getName() {
             return name;
@@ -47,10 +47,10 @@ private List<String> days;
         }
 
         public List<String> getDays(){
-            return days;
+            return day;
         }
-        public void setDays(List<String> days){
-            this.days = days;
+        public void setDays(List<String> day){
+            this.day = day;
         }
 
     @Converter
