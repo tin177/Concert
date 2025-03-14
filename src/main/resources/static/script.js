@@ -85,6 +85,7 @@ function submitReservation(event) {
     event.preventDefault(); 
     saveFormData();
     const formData = getFormData();
+    console.log("Sending data:", formData); 
 
     fetch("/api/submitChoice", {
         method: "POST",
@@ -93,7 +94,9 @@ function submitReservation(event) {
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Response from backend:", data);
         if (data.success) {
+            console.log("Response from backend:", data);
             alert("Reservation successful!");
         } else {
             alert("Reservation failed. js f" + data.message);
