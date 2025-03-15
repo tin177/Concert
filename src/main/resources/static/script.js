@@ -57,17 +57,17 @@ document.getElementById("startButton").addEventListener("click", async function(
 //     }
 });
 
-async function checkIfExists(name, email) {
-    try {
-        const response = await fetch(`/api/checkReservation?name=${name}&email=${email}`);
-        const data = await response.json();
-        console.log("API Response: ", data)
-        return data.exists;
-    } catch (error) {
-        console.error("Error checking reservation:", error);
-        return false;
-    }
-}
+// async function checkIfExists(name, email) {
+//     try {
+//         const response = await fetch(`/api/checkReservation?name=${name}&email=${email}`);
+//         const data = await response.json();
+//         console.log("API Response: ", data)
+//         return data.exists;
+//     } catch (error) {
+//         console.error("Error checking reservation:", error);
+//         return false;
+//     }
+// }
 function getFormData() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();

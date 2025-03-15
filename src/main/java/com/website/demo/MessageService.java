@@ -16,6 +16,12 @@ public class MessageService {
         // if (messageRepository.existsByNameAndEmail(name, email)){
         //     throw new IllegalArgumentException("You're already reserved. Do you want to view your reservation?");
         // }
-        messageRepository.saveMessageToDatabase(name, email, day);
+        try {
+            System.out.println("Saving: " + name + ", " + email + ", " + day);
+            messageRepository.saveMessageToDatabase(name, email, day);
+            System.out.println("Save successful!");
+        } catch (Exception e) {
+            System.err.println("Error saving message: " + e.getMessage());
+        }
     }
 }
