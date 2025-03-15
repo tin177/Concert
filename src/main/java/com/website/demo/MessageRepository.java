@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class MessageRepository {
-
     private final JdbcTemplate jdbcTemplate;
 
     public MessageRepository(JdbcTemplate jdbcTemplate) {

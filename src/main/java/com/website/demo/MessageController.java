@@ -38,6 +38,7 @@ public class MessageController {
 
         return ResponseEntity.ok(Map.of("success", true, "message", "Reservation successful!"));
     }     
+    
 @GetMapping("/api/checkReservation")
 public ResponseEntity<Map<String, Boolean>> checkReservation(
     @RequestParam String name, 
