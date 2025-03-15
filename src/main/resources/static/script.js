@@ -43,18 +43,18 @@ document.getElementById("startButton").addEventListener("click", async function(
         emailError.style.display = "none";
     }
 
-    try {
-        let isExists = await checkIfExists(name, email);
-        if (isExists) {
-            alert("You have already made a reservation.");
-            return;
-        } 
+    // try {
+    //     let isExists = await checkIfExists(name, email);
+    //     if (isExists) {
+    //         alert("You have already made a reservation.");
+    //         return;
+    //     } 
             signIn.style.display = "none";
             rsrv.style.display = "block";
         
-    } catch(error) {
-        alert("An error occurred. Please try again later.");
-    }
+//     } catch(error) {
+//         alert("An error occurred. Please try again later.");
+//     }
 });
 
 async function checkIfExists(name, email) {

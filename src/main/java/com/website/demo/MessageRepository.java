@@ -11,11 +11,11 @@ public class MessageRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
     
-    public boolean existsByNameAndEmail(String name, String email) {
-        String sql = "SELECT COUNT(*) FROM user_getloudtix WHERE name = ? AND email = ?";
-        Integer count = jdbcTemplate.queryForObject(sql, Integer.class, name, email);
-        return count != null && count > 0; 
-    }
+    // public boolean existsByNameAndEmail(String name, String email) {
+    //     String sql = "SELECT COUNT(*) FROM user_getloudtix WHERE name = ? AND email = ?";
+    //     Integer count = jdbcTemplate.queryForObject(sql, Integer.class, name, email);
+    //     return count != null && count > 0; 
+    // }
 
     public void saveMessageToDatabase(String name, String email, String day) {
         String sql = "INSERT INTO user_getloudtix (name, email, day) VALUES (?, ?, ?)";

@@ -1,6 +1,7 @@
 package com.website.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,33 +28,34 @@ public class MessageController {
     }
     @PostMapping("/submitChoice")
     public ResponseEntity<Map<String, Object>> submitChoice(@RequestBody Message request) {
+        try {
         System.out.println("Received request: " + request);
+
         if (request.getDay() == null || request.getDay().isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of("success", false, "message", "Please select at least one day."));
         }
 
         String dayString = String.join(", ", request.getDay());
+      
+        System.out.println("Saving message: Name = " + request.getName() + ", Email = " + request.getEmail() + ", Days = " + dayString);
 
         messageService.saveMessage(request.getName(), request.getEmail(), dayString);
 
         return ResponseEntity.ok(Map.of("success", true, "message", "Reservation successful!"));
-    }     
-    
-@GetMapping("/api/checkReservation")
-public ResponseEntity<Map<String, Boolean>> checkReservation(
-    @RequestParam String name, 
-    @RequestParam String email) {
-    boolean exists = messageRepository.existsByNameAndEmail(name, email);
-    Map<String, Boolean> response = new HashMap<>();
-    response.put("exists", exists);
-    return ResponseEntity.ok(response);
-}
+    } catch (Exception e) {
+        e.printStackTrace(); // Log the actual error
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("success", false, "message", "Internal Server Error"));
+    }
 
-
-
-
-
-
+// @GetMapping("/api/checkReservation")
+// public ResponseEntity<Map<String, Boolean>> checkReservation(
+//     @RequestParam String name, 
+//     @RequestParam String email) {
+//     boolean exists = messageRepository.existsByNameAndEmail(name, email);
+//     Map<String, Boolean> response = new HashMap<>();
+//     response.put("exists", exists);
+//     return ResponseEntity.ok(response);
+// }
     // @GetMapping("/home")
     // public String showHomePage() {
     //     return "index";
@@ -68,4 +70,5 @@ public ResponseEntity<Map<String, Boolean>> checkReservation(
     // // public String getMessage() {
     // //     return "Hello from Spring Boot!";
     // // }
+}
 }

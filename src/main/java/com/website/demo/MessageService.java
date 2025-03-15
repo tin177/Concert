@@ -13,9 +13,9 @@ public class MessageService {
     }
 
     public void saveMessage(String name, String email, String day) {
-        if (messageRepository.existsByNameAndEmail(name, email)){
-            throw new IllegalArgumentException("You're already reserved. Do you want to view your reservation?");
-        }
+        // if (messageRepository.existsByNameAndEmail(name, email)){
+        //     throw new IllegalArgumentException("You're already reserved. Do you want to view your reservation?");
+        // }
         messageRepository.saveMessageToDatabase(name, email, day);
     }
 }
