@@ -17,10 +17,9 @@ import jakarta.persistence.Table;
 @Entity 
 @Table(name = "user_getloudtix")
 public class Message {
+    private String name;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-private String name;
-private String email;
+    private String email;
 
 @ElementCollection
 private List<String> day;
