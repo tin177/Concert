@@ -79,7 +79,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.website.demo.TicketwebApplication</mainClass>
+					<mainClass>com.website.demo.GetLoudTixApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
