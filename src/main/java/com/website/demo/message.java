@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 
 @Entity 
 @Table(name = "user_getloudtix")
-public class message {
+public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 private String name;
@@ -25,9 +25,9 @@ private String email;
 @ElementCollection
 private List<String> day;
 
-    public message() {}
+    public Message() {}
 
-    public message(String name, String email, List<String> day){
+    public Message(String name, String email, List<String> day){
         this.name = name;
         this.email = email;
         this.day = day;

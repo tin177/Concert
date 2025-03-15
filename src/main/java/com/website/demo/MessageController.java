@@ -26,7 +26,7 @@ public class MessageController {
         this.messageRepository = messageRepository;
     }
     @PostMapping("/submitChoice")
-    public ResponseEntity<Map<String, Object>> submitChoice(@RequestBody message request) {
+    public ResponseEntity<Map<String, Object>> submitChoice(@RequestBody Message request) {
         System.out.println("Received request: " + request);
         if (request.getDay() == null || request.getDay().isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of("success", false, "message", "Please select at least one day."));
