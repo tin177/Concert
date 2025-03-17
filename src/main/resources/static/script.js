@@ -19,11 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.getElementById("startButton").addEventListener("click", async function(event) {
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("startButton").addEventListener("click", async function(event) {
     event.preventDefault();
 
     var signIn = document.getElementById("signIn");
-    var startButtonb = document.getElementById("startButton");
+    var startButton = document.getElementById("startButton");
     var rsrv = document.getElementById("rsrv");
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -55,6 +56,7 @@ document.getElementById("startButton").addEventListener("click", async function(
 //     } catch(error) {
 //         alert("An error occurred. Please try again later.");
 //     }
+});
 });
 
 // async function checkIfExists(name, email) {
