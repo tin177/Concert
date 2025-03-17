@@ -121,5 +121,5 @@ document.getElementById("confirmation").addEventListener("submit", function(even
     if (!userConfirmed) return;
 
     saveFormData(); 
-    submitReservation(); 
+    submitReservation(event); 
 });
