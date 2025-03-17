@@ -10,6 +10,11 @@
     font-size:  40px;
     display: top;
 } */
+ span{
+    color: red;
+    display: none; 
+
+ }
 
 body{
     background-color: rgb(88, 73, 183);
@@ -21,9 +26,11 @@ body{
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    
+    min-height: 100vh;
 
 }
+
+
 
  .container {
     background-color: #f9f9f9;
@@ -33,13 +40,51 @@ body{
     height: 280px;
     position: relative;
     overflow: hidden;
+    margin-top: 20px;
     max-width: 100%;
     min-height: 480px;
     padding: 100px;
     place-items: center;
     border: 2px solid #333;
-        
+    align-items: flex-start;
 } 
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px; 
+    position: fixed;
+    top: 0;
+    left: 20;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 60px;
+}
+    
+
+ .GetLoudTix{
+    font-size: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+ } 
+
+.vrh1{
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 40px;
+    position: relative;
+    top: -90px; 
+}
+.info p{
+    text-align: center;
+    width: 100%;
+    font-size: 90px;
+}
 /* .container button.hidden{
     background-color: transparent; 
     border-color: aqua;
@@ -52,6 +97,9 @@ input{
     border-radius: 3px;
     margin-bottom: 10px;
 }*/
+.reserveh1 h1{
+    text-align: center;
+}
 .container button{
     background-color: rgb(96, 96, 196);
     color: white;
@@ -76,6 +124,7 @@ input{
     flex-direction: column;
     padding: 0 40px;
     height: 100%;
+
 }
 
 .container input{
@@ -106,11 +155,51 @@ input{
 
 } */
 
+ .info{
+    font-size: large;
+ }
+ .reservationDetails {
+    width: 100%;
+    height: 100%; 
+    
+
+ }
+ 
+.reservationDetails p { 
+    font-size: 16px; 
+    color: #333; 
+    margin-bottom: 30px;
+    align-items: flex-start; 
+    display: flex;
+    flex-direction: column;
+    font-size: 22px; 
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px; 
+}
+
 .viewRsrv{
     left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
+    width: 100%;
+    margin-top: 20px;
+    opacity: 1; 
+    z-index: 5;   
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100%; 
+    padding: 20px;
+}
+
+.viewRsrv button {
+    margin-top: auto; 
+    margin: 5px 0;
+    width: 100%; 
+    max-width: 300px;
+    white-space: nowrap;
+    text-align: center;
+   
 }
 
 .container.active .viewRsrv{

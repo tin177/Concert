@@ -8,6 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
         view.style.display = "block";
     });
 });
+    // fetch('/getUserData')  
+    // .then(response => {
+    //     if (!response.ok) {
+    //         throw new Error("Network response was not ok");
+    //     }
+    //     return response.json();
+    // })
+    // .then(data => {
+    //     document.getElementById("nameLabel").innerText = "Name: " + (data.name || "N/A");
+    //     document.getElementById("emailLabel").innerText = "Email: " + (data.email || "N/A");
+    //     document.getElementById("daysLabel").innerText = "Selected Days: " + (data.selectedDays?.join(", ") || "None");
+    // })
+    // .catch(error => {
+    //     console.error("Error fetching data:", error);
+    //     alert("Failed to load reservation details. Please try again.");
+    // });
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     var view = document.getElementById("viewRsrv");
     var signIn = document.getElementById("signIn");
